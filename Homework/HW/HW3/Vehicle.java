@@ -16,7 +16,7 @@ import java.util.Scanner;
 public class Vehicle {
 
     String typeVehicle;                                     //  type of vehicle(examples: 
-                                                            // truck,car,motercycle)
+                                                            // Ford, Jeep, Toyota)
 
     int numWheels;                                          //  number of wheels present 
                                                             // on vehicle
@@ -24,6 +24,46 @@ public class Vehicle {
     int year;                                               //  year vehicle was made
 
     String color;                                           //  color of vehicle
+
+    public static void main(String[] args) {
+        Vehicle motercycle = new Vehicle();                 // Make empty Vehicle object
+
+        Vehicle car = new Vehicle("Jeep", 2004, 4, "grey");
+                                                            // Make populated Vehicle object
+
+        System.out.println("Input Attributes for an instance of the class Vehicle:");
+        motercycle.input();                                 // prompt user to fill attributes
+                                                            // of empty instance of 
+                                                            // Vehicle class
+
+        System.out.println("\nPrint Contents of, Moterized-Unicycle (Vehicle)");
+                                                            // Tell user what vehicle is 
+                                                            //  being printed in the terminal
+
+        motercycle.output();                                // print output of Vehicle var
+
+        System.out.println("\nPrint Contents of, car (Vehicle)");
+                                                            // Tell user what vehicle is 
+                                                            //  being printed in the terminal
+
+        car.output();                                       // print output of other 
+                                                            // Vehicle var
+
+        if (motercycle.isBigger(car)) {                     // Check if motercycle is 
+                                                            //  bigger than car output
+                                                            //  accordingly
+            System.out.println("The first vehicle is bigger than the second vehicle");
+        } else{         
+            System.out.println("the first vehicle is smaller than the second vehicle");
+        }
+        System.out.println();                               // PRINT EMPTY LINE
+        if (motercycle.isNewer(car)) {                      // Check if motercycle is newer
+                                                            //  than car, output accordingly
+            System.out.println("The first vehicle is newer than the second vehicle");
+        } else{
+            System.out.println("the first vehicle is older than the second vehicle");
+        }
+    }
 
     public Vehicle(String typeVehicle, int year, int numWheels, String color) {
         //  DESCRIPTION: from actual parameters that parralel the attributes of class Vehicle
@@ -55,16 +95,17 @@ public class Vehicle {
 
         Scanner read = new Scanner(System.in);              // Create new Scanner Object
 
-        System.out.print("type of vehicle: ");            // Prompt User for Input(type)
+        System.out.print("type of vehicle.......: ");            // Prompt User for Input(type)
         typeVehicle = read.nextLine();                      // vehicleType = user input
 
-        System.out.print("number of wheels: ");           // Prompt User for Input(wheels)
+        System.out.print("number of wheels......: ");           // Prompt User for Input(wheels)
         numWheels = read.nextInt();                         // #Wheels = user input
 
-        System.out.print("year vehicle was made: ");      // Prompt User for Input(year)
+        System.out.print("year vehicle was made.: ");      // Prompt User for Input(year)
         year = read.nextInt();                              // year = user input
+        read.nextLine();                                    // Prepare Scanner to read next line
 
-        System.out.print("color: ");                      // Prompt User for Input(color)
+        System.out.print("color.................: ");                      // Prompt User for Input(color)
         color = read.nextLine();                            // color = user input
 
         read.close();                                       // end scanner object
@@ -76,10 +117,10 @@ public class Vehicle {
         // vehicles from one anotherm then # of wheels, year, and color are all secondary
         // attributes according to this format
 
-        System.out.println("vehicle type: " + typeVehicle + "\n\t" + // Print Vehicle Type
-                "number of wheels: " + numWheels + "\n\t" +          // Print # Wheels
-                "year: " + year + "\n\t" +                           // Print Year
-                "color: " + color);                                  // Print Color
+        System.out.println("\tvehicle type........: " + typeVehicle + "\n\t" + // Print Vehicle Type
+                "number of wheels....: " + numWheels + "\n\t" +          // Print # Wheels
+                "year................:" + year + "\n\t" +                           // Print Year
+                "color...............: " + color);                                  // Print Color
     }
 
     public boolean isBigger(Vehicle vehicleObject) {
