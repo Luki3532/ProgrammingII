@@ -1,3 +1,4 @@
+
 /*
  * Lucas Carpenter
  * 2/21/2024
@@ -60,12 +61,16 @@ public class Date {
         Scanner read = new Scanner(System.in);  // New Scanner object
 
         System.out.println
-        ("enter values for the three attributes(mm[ENTER]dd[ENTER]yyyy[ENTER]): ");
+        ("enter values for the three attributes: ");
                                                 //Prompt the user for input
-                                                //  Tell them the format it may be accepted
 
+        System.out.print("\tMonth:\t");
         this.month = read.nextInt();            // class attribute(month)   =   system.in
+
+        System.out.print("\tDay:\t");
         this.day = read.nextInt();              // class attribute(day)     =   system.in
+
+        System.out.print("\tYear:\t");
         this.year = read.nextInt();             // class attribute(year)    =   system.in
 
         if (month > 12) {                       // month must be in range [1,12]

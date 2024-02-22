@@ -3,60 +3,71 @@
  * Lucas Carpenter 
  * C201
  * 2/21/2024
- * GENNERAL DESCRIPTION:
+ * GENNERAL DESCRIPTION: this java file follows a Vehicle object and supports attributes type 
+    // of vehicle, number of wheels, year, and color. This class has comparison methods that 
+    // compares attributes of instances of this object. This class has methods that construct 
+    // instances of this object. This class has input/output methods, the input methods 
+    // facilitate in user input from the terminal that follows prompts for the user to 
+    // follow. finally, the output method that prints the object vehicles contents to the 
+    // terminal.
  */
 import java.util.Scanner;
 
 public class Vehicle {
-    //  DESCRIPTION: 
 
+    String typeVehicle;                                     //  type of vehicle(examples: 
+                                                            // truck,car,motercycle)
 
-    String typeOfVehicle;
+    int numWheels;                                          //  number of wheels present 
+                                                            // on vehicle
 
-    int numberOfWheels;
+    int year;                                               //  year vehicle was made
 
-    int year;
+    String color;                                           //  color of vehicle
 
-    String color;
-
-    public Vehicle(String typeOfVehicle, int year, int numberOfWheels, String color) {
+    public Vehicle(String typeVehicle, int year, int numWheels, String color) {
         //  DESCRIPTION: from actual parameters that parralel the attributes of class Vehicle
         //  constructor Vehicle populates the attributes of new Vehicle object
 
-        this.typeOfVehicle = typeOfVehicle;
-        this.numberOfWheels = numberOfWheels;
+        this.typeVehicle = typeVehicle;
+        this.numWheels = numWheels;
         this.year = year;
         this.color = color;
     }
 
     public Vehicle() {
-        //  DESCRIPTION: 
+        //  DESCRIPTION: Constructor method, Populates int attributes with, 0. 
+        //  and String attributes with "" (empty string). This method essentially
+        //  creates an empty Vehicle object.
 
-        typeOfVehicle = "";
-        numberOfWheels = 0;
+        typeVehicle = "";
+        numWheels = 0;
         year = 0;
         color = "";
     }
 
     public void input() {
         //  DESCRIPTION: prompt user to input attributes for the Object Vehicle.
-        //  
+        //  write user input to the class attributes. this method creates a
+        //  Scanner object and closes the object at the end of the method.
+        //  after this method runs all of the attributes of Vehicle are
+        //  populated.
 
-        Scanner read = new Scanner(System.in);
+        Scanner read = new Scanner(System.in);              // Create new Scanner Object
 
-        System.out.print("type of vehicle: ");
-        typeOfVehicle = read.nextLine();
+        System.out.print("type of vehicle: ");            // Prompt User for Input(type)
+        typeVehicle = read.nextLine();                      // vehicleType = user input
 
-        System.out.print("number of wheels: ");
-        numberOfWheels = read.nextInt();
+        System.out.print("number of wheels: ");           // Prompt User for Input(wheels)
+        numWheels = read.nextInt();                         // #Wheels = user input
 
-        System.out.print("year vehicle was made: ");
-        year = read.nextInt();
+        System.out.print("year vehicle was made: ");      // Prompt User for Input(year)
+        year = read.nextInt();                              // year = user input
 
-        System.out.print("color: ");
-        color = read.nextLine();
+        System.out.print("color: ");                      // Prompt User for Input(color)
+        color = read.nextLine();                            // color = user input
 
-        read.close();
+        read.close();                                       // end scanner object
     }
 
     public void output() {
@@ -65,22 +76,22 @@ public class Vehicle {
         // vehicles from one anotherm then # of wheels, year, and color are all secondary
         // attributes according to this format
 
-        System.out.println("vehicle type: " + typeOfVehicle + "\n\t" + // Print Vehicle Type
-                "number of wheels: " + numberOfWheels + "\n\t" +       // Print # Wheels
-                "year: " + year + "\n\t" +                             // Print Year
-                "color: " + color);                                    // Print Color
+        System.out.println("vehicle type: " + typeVehicle + "\n\t" + // Print Vehicle Type
+                "number of wheels: " + numWheels + "\n\t" +          // Print # Wheels
+                "year: " + year + "\n\t" +                           // Print Year
+                "color: " + color);                                  // Print Color
     }
 
     public boolean isBigger(Vehicle vehicleObject) {
         // DESCRIPTION: compares This object(the object this method belongs)
         // to another Vehicle object(vehicleObject) The wheels are being compared.
-        // if this objects numberOfWheels(int) is larger than the others return TRUE, 
+        // if this objects numWheels(int) is larger than the others return TRUE, 
         // else return FALSE
 
-        if (this.numberOfWheels > vehicleObject.numberOfWheels) {      
+        if (this.numWheels > vehicleObject.numWheels) {      
                             /* 
                                 if this objects(int)is 
-                            larger than thenumberOfWheels(int) 
+                            larger than the numWheels(int) 
                             in vehicleObject(Vehicle) actual 
                             parameter THEN return True; else, false.
                             */
@@ -102,8 +113,8 @@ public class Vehicle {
 
     public String toString() {
 
-        return "vehicle type: " + typeOfVehicle + "\n\t" +
-                "number of wheels: " + numberOfWheels + "\n\t" +
+        return "vehicle type: " + typeVehicle + "\n\t" +
+                "number of wheels: " + numWheels + "\n\t" +
                 "year: " + year + "\n\t" +
                 "color: " + color;
     }
