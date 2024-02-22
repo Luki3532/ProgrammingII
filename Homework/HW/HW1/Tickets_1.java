@@ -64,7 +64,7 @@ public class Tickets_1 {
             }
 
         }
-
+        Read.close();
     }
 
 }
