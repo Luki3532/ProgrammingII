@@ -117,10 +117,14 @@ public class Vehicle {
         // vehicles from one anotherm then # of wheels, year, and color are all secondary
         // attributes according to this format
 
-        System.out.println("\tvehicle type........: " + typeVehicle + "\n\t" + // Print Vehicle Type
-                "number of wheels....: " + numWheels + "\n\t" +          // Print # Wheels
-                "year................:" + year + "\n\t" +                           // Print Year
-                "color...............: " + color);                                  // Print Color
+        System.out.println("\tvehicle type........: " + typeVehicle + "\n\t" +      
+                                                            // Print Vehicle Type
+                "number of wheels....: " + numWheels + "\n\t" +                     
+                                                            // Print # Wheels
+                "year................:" + year + "\n\t" +                           
+                                                            // Print Year
+                "color...............: " + color);                                  
+                                                            // Print Color
     }
 
     public boolean isBigger(Vehicle vehicleObject) {
@@ -136,9 +140,9 @@ public class Vehicle {
                             in vehicleObject(Vehicle) actual 
                             parameter THEN return True; else, false.
                             */
-            return true;                                               // return TRUE
+            return true;                                    // return TRUE
         }
-        return false;                                                  // else return FALSE
+        return false;                                       // else return FALSE
     }
 
     public boolean isNewer(Vehicle vehicleObject) {
