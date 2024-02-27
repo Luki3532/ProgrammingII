@@ -4,20 +4,20 @@
 public class HW5 {
 
     public static void main(String[] args) {
-        // System.out.println(checkAnagram("listen", "silent"));
-        // System.out.println(checkAnagram("elbow", "below"));
-        // System.out.println(checkAnagram("Dormitory", "Dirty Room"));
-        // System.out.println(checkAnagram("funeral", "real fun"));
-        // System.out.println(checkAnagram("a gentleman", "elegant man"));
-        // System.out.println(checkAnagram("look", "lock"));
-        // System.out.println(checkAnagram("", ""));
+        System.out.println(checkAnagram("listen", "silent"));
+        System.out.println(checkAnagram("elbow", "below"));
+        System.out.println(checkAnagram("Dormitory", "Dirty Room"));
+        System.out.println(checkAnagram("funeral", "real fun"));
+        System.out.println(checkAnagram("a gentleman", "elegant man"));
+        System.out.println(checkAnagram("look", "lock"));
+        System.out.println(checkAnagram("", ""));
 
-        // // Check for case sensitivity
-        // System.out.println(checkAnagram("NulL|", "1nUll"));
+        // Check for case sensitivity
+        System.out.println(checkAnagram("NulL|", "1nUll"));
 
-        // System.out.println(checkAnagram("null", ""));
-        // System.out.println(checkAnagram("abc", "abcd"));
-        // System.out.println(checkAnagram("abcd", "abd"));
+        System.out.println(checkAnagram("null", ""));
+        System.out.println(checkAnagram("abc", "abcd"));
+        System.out.println(checkAnagram("abcd", "abd"));
         System.out.println(checkAnagram("abbb", "abDD"));
     }
     public static boolean checkAnagram(String word, String otherWord) {

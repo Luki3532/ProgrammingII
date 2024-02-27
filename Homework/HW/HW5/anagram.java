@@ -15,6 +15,51 @@ they are not an anagram.
  */
 
 public class anagram {
+    public static void main(String[] args) {
+        System.out.println("listen and silent: " +          //Set 1: Comparing Regular 
+                                                            // expressions
+            isAnagram("listen", "silent"));
+
+        System.out.println("elbow and below: " + 
+            isAnagram("elbow", "below"));
+
+        System.out.println("Dormitory and Dirty Room: " +   //Set 2: Comparing 
+                                                            // expressions with spaces
+            isAnagram("Dormitory", "Dirty Room"));
+
+        System.out.println("funeral and real fun: " + 
+            isAnagram("funeral", "real fun"));
+
+        System.out.println("a gentleman and elegant man: " + 
+            isAnagram("a gentleman", "elegant man"));
+
+        System.out.println("look and lock: " +             //Set 3: Comparing 
+                                                           // expression with duplicates
+            isAnagram("look", "lock"));
+
+        System.out.println(" and : " +                     //Set 4: Comparing 
+                                                           // empty strings    
+            isAnagram("", ""));
+
+        System.out.println("NulL| and 1nUll: " +           //Set 5: 
+                                                           // Compare illigal chars
+            isAnagram("NulL|", "1nUll"));
+
+        System.out.println("null and : " + 
+            isAnagram("null", ""));
+
+        System.out.println("abc and abcd: " +              //Set 6: Comparing 
+                                                           // duplicates *AGAIN* these 
+                                                           // really messed the 
+                                                           // program up
+            isAnagram("abc", "abcd"));
+
+        System.out.println("abcd and abd: " + 
+            isAnagram("abcd", "abd"));
+
+        System.out.println("abdb and abDD: " +              
+            isAnagram("abdb", "abDD"));
+    }
 
     public static boolean isAnagram(String word, String otherWord) {
     /*Dscription: this method returns true or false if two words are anagrams.
@@ -24,40 +69,53 @@ public class anagram {
     This Method Uses: removeSingleChar (a method of anagram
     to make the isAnagram method less convoluted)  */
 
-        // remove illegal chars from word and word 2 e.g.(" ", |, !, *)
-        word = word.replaceAll("\\s+|[^a-zA-Z]", "").toLowerCase();
-        otherWord = otherWord.replaceAll("\\s+|[^a-zA-Z]", "").toLowerCase();
-
-
-        // check to see if they are the same length, if they are not THEN return false
-        if (word.length() != otherWord.length()) {
+        word = 
+        word.replaceAll("\\s+|[^a-zA-Z]", "").toLowerCase();
+                                                            // Remove illigal chars and 
+                                                            // change string to 
+                                                            // all lowercase
+        otherWord = 
+        otherWord.replaceAll("\\s+|[^a-zA-Z]", "").toLowerCase();
+                                                            
+    
+        if (word.length() != otherWord.length()) {          // words must match in 
+                                                            // length if they dont 
+                                                            // then return false
             return false;
         }
+    
+        for (int i = 0; i < word.length(); i++) {           // parse though word
+            char c = word.charAt(i);                        // where c(char) is 
+                                                            // characters from word
 
-
-        // check if the first char of word is equal to any of the chars in word2
-        for (int i = 0; i < word.length(); i++) { //parse through word
-            for (int j = 0; j < otherWord.length(); j++) { //parse through otherWord
-                if (    word.charAt(i) != otherWord.charAt(j)   ) {
-
-                    /*when reaching the end of word2(when j == other word length) 
-                    and all chars did not match THEN return FALSE   */
-                    if (    j == otherWord.length() ) {
-                        return false;
-                    }
-                    
-
-                } else{
-                    // Remove Single Char from otherWord that matched from word
-                    otherWord = removeSingleChar(otherWord, word.charAt(i));
-                }
+            int index = otherWord.indexOf(c);               // index is the index of 
+                                                            // the first occurance of 
+                                                            // the earliest character 
+                                                            // in otherWord
+    
+            if (index == -1) {                              // if indexOf returns -1 
+                                                            // then the character does 
+                                                            // not exist in the otherWord
+                return false;
+            } else {
+                otherWord = removeSingleChar(otherWord, c); // if the character exists in 
+                                                            // otherWord then remove that 
+                                                            // character and re run the 
+                                                            // loop with the returned string
             }
         }
-        //if all chars are made of 1 pair then return true
-        return true;
-        
+    
+        if (otherWord.length() == 0) {                      // if otherWord is empty the 
+                                                            // words/phrases are anagrams, 
+                                                            // otherwise the error would have 
+                                                            // been caught so print the 
+                                                            // appropriate return statement
+            return true;
+        } else{
+            return false;
+        }
     }
-
+    
 
     public static String removeSingleChar(String word, char removeMe) {
     // Description: This method removed a character(remove me) from a String(word)
@@ -67,18 +125,32 @@ public class anagram {
     //  until the for loop ends and the method returns (String)temp 
 
     // I made this method to make the isAnagram method less Confusing
-        String temp = ""; // this variable temp(String) will be returned
-        boolean charRemoved = false; //signal that char has been found and removed
 
-        for (int i = 0; i < word.length(); i++) { //parse through word
+        String temp = "";                                   // this variable temp(String) 
+                                                            // will be returned
 
-            /*if word@index[i] == removeMe(char) AND char has not been removed yet */
-            if (    (word.charAt(i) == removeMe) && (charRemoved == false)  ) {
-                charRemoved = true; // switch charRemoved(boolean) TRUE
+        boolean charRemoved = false;                        //create a switch so that when 
+                                                            // the char to be removed is 
+                                                            // found it does not 
+                                                            // continually remove chars 
+                                                            // of contents removeMe
+       
+
+        for (int i = 0; i < word.length(); i++) {           //parse through word
+
+            if (    (word.charAt(i) == removeMe) && (charRemoved == false) ) {
+                                                            // if removeMe(char) is found 
+                                                            // and it has not been found 
+                                                            // before then tell the boolean 
+                                                            // that the char has been 
+                                                            // found/removed
+                charRemoved = true;
             } else{
-                temp += word.charAt(i); //ADD word@index[i]
+                temp += word.charAt(i);                     // in every other case add 
+                                                            // the char to temp
             }
         }
-        return temp;
+        return temp;                                        // finally return temp
+
     }
 }
