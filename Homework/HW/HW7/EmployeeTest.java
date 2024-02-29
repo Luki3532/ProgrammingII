@@ -14,10 +14,10 @@ public class EmployeeTest {
 
     public static void main(String[] args) {
         Employee firstEmployee = new Employee("John","Ralph", -15.75);
-        // first constructor ** USE NEGATIVE SALARY **
+        // use first constructor ** USE NEGATIVE SALARY **
 
         Employee secondEmployee = new Employee("Jimmy", "Fallon");
-        // second constructor
+        // use second constructor
 
         // Print Both Objects
         System.out.println("\n"+firstEmployee+"\n"+ secondEmployee);
