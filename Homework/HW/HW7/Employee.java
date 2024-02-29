@@ -6,7 +6,7 @@
  * GENNERAL DESCRIPTION: This class follows a Employee with first, last names,
  * and monthly salary. This class hosts getters, setters, and a toString method.
  * this class has 2 constructors: the first sets all three attributes and the
- * other prompts 
+ * other prompts. 
  */
 import java.util.Scanner;
 
