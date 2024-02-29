@@ -46,11 +46,8 @@ public class EmployeeTest {
                             secondEmployee.getLastName()+") is: $"+ 
                             (secondEmployee.getMonthlySalary()));
 
-
-        firstEmployee.setMonthlySalary(firstEmployee.getMonthlySalary()*1.1);
-                                                                    // give employee a raise, 
-                                                                    // set monthly salary 
-
+        // give employee a raise, set monthly salary to 1.1 times what the current monthly salary is.
+        firstEmployee.setMonthlySalary(firstEmployee.getMonthlySalary()*1.1);                                                   
         secondEmployee.setMonthlySalary(secondEmployee.getMonthlySalary()*1.1);
         
         System.out.printf
