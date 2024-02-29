@@ -4,7 +4,11 @@
  * C201
  * Assignment #7
  * GENNERAL DESCRIPTION: Employee Test serves to use methods from the Employee class.
- * This method 
+ *  This class creates 2 new employee objects then prints them out to the terminal.
+ *  Then the program changes the salary of employee 1 to 1500. Next the program
+ *  Will use gettors to print out information like yearly salary and the employee's
+ *  monthly pay before and after a 10% raise. Finally this program prints out the
+ *  objects with implicit use of the toString method.
  */
 public class EmployeeTest {
 
