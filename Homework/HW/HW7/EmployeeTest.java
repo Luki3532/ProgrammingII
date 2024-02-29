@@ -63,7 +63,7 @@ public class EmployeeTest {
             secondEmployee.getMonthlySalary());                     // (%.2f)   monthly salary
 
 
-                                                                    // Print Both Objects again.
+        // Print Both Objects again.
         System.out.println("\n"+firstEmployee+"\n"+ secondEmployee);
 
     }
