@@ -3,7 +3,8 @@
  * 2/28/2024
  * C201
  * Assignment #7
- * GENNERAL DESCRIPTION:
+ * GENNERAL DESCRIPTION: Employee Test serves to use methods from the Employee class.
+ * This method 
  */
 public class EmployeeTest {
 
@@ -47,7 +48,8 @@ public class EmployeeTest {
 
 
         firstEmployee.setMonthlySalary(firstEmployee.getMonthlySalary()*1.1);
-                                                                    // give employee a raise, set monthly salary 
+                                                                    // give employee a raise, 
+                                                                    // set monthly salary 
 
         secondEmployee.setMonthlySalary(secondEmployee.getMonthlySalary()*1.1);
         
