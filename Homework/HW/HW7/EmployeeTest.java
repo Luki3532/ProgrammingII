@@ -12,9 +12,6 @@
  */
 public class EmployeeTest {
 
-    /**
-     * @param args
-     */
     public static void main(String[] args) {
         Employee firstEmployee = new Employee("John","Ralph", -15.75);
         // first constructor ** USE NEGATIVE SALARY **
