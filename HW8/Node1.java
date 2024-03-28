@@ -1,16 +1,16 @@
-
-
-
 /* Node1
  * Lucas Carpenter
  * Computer Programming II
- * GENERAL DESCRIPTION: 
  */
 
 
 
 /* CLASS DESCRIPTION(Node1):
- * 
+ *  The Node1 class represents a node in a linked list. It contains data, 
+ *  an associated count, and a reference to the next node. 
+ *  Methods allow you to get or set these values.
+ *  This class is used by LinkedList1
+ *  This class does not use any imports
  */
 public class Node1 {
 

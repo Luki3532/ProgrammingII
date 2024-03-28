@@ -1,11 +1,7 @@
-
-
-
 /* LinkedList1Demo
  * Lucas Carpenter
  * Computer Programming II
  * 3/25/2024
- * GENERAL DESCRIPTION: 
  */
 
 
@@ -14,7 +10,12 @@
 import java.util.Scanner;
 
 /* CLASS DESCRIPTION(LinkedList1Demo):
+ *  LinkedList1Demo demonstrates a linked list. It offers options to add, remove, count, and print elements. 
+ *  a user selects actions from a menu. When they choose to quit, the program says “Goodbye!”
+ *  This class uses a switch and 
  * 
+ *  This class uses LinkedList1 and java Scanner
+ *  This class is not used by any other classes.
  */
 public class LinkedList1Demo {
     public static void main(String[] args) {
@@ -51,7 +52,7 @@ public class LinkedList1Demo {
             // Case 2, removes head of myList
             // Case 3, print # of items in linked list
             // Case 4, print all elements to terminal
-            // There is no case 5 however, when the program ends a message "Goodbye!" is displayed
+            // There is a case 5 however, it only is used 1 time when the program is called to end.
             // by default the program will just prompt you again until valid switch case is relayed to the Scanner.
             switch (userChoiceInt) {
                 case 1:                                           // BEGIN case 1
@@ -77,13 +78,16 @@ public class LinkedList1Demo {
                     myList.printList();                           // WRITE  content of all nodes in myList
                     break;                                        // END    case 4
 
+                case 5:                                           // BEGIN  case 5
+                    System.out.println("Goodbye!");             // WRITE  "Goodbye!"
+                    break;                                        // END    case 5
+
                 default:                                          // BEGIN  default
                                                                   // DO     Nothing, no error message
                     break;                                        // END    default
             }
             System.out.println();                                 // WRITE  blank space
         }
-        System.out.println("Goodbye!");                         // When 5 is given from user, print goodbye.
         read.close();
     }
 }

@@ -1,7 +1,4 @@
-
-
-
-/* LinkedList1Demo
+/* LinkedList1
  * Lucas Carpenter
  * Computer Programming II
  * 3/25/2024
@@ -10,9 +7,15 @@
 
 
 /* CLASS DESCRIPTION(LinkedList1):
- *  this class serves as a linked list body, and has methods that get and set items from the list and can generate information such as the length of the list.
- *  this class uses getter and setter methods from Node1. The purpose of this class is to piece together nodes, where the list can be modified by a user.
- *  
+ *  this class serves as a linked list body, and has methods that get and set items 
+ *  from the list and can generate information such as the length of the list.
+ *  this class uses getter and setter methods from Node1. The purpose of this class 
+ *  is to piece together nodes, where the list can be modified by a user.
+ *  It has methods to add nodes, delete the head node, count nodes, and print the list. 
+ *  The head points to the first node.
+ * 
+ *  This class uses Node1
+ *  This class is used by LinkedList1Demo
  */
 public class LinkedList1 {
 
