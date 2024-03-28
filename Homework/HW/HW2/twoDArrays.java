@@ -71,6 +71,7 @@ class twoDArrays {
                                                     //  to find the sum of elements
                                                     //  (TwoDArray Private Method) 
                                                     //  for the respective columns.(1,2,3)
+    Read.close();
     }
 
     private static int sumOfElements(int[] Array) {

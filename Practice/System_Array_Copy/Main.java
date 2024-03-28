@@ -5,7 +5,7 @@ package System_Array_Copy;
 /**
  * Main
  */
-import java.util.*;
+// import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
