@@ -67,7 +67,12 @@ public class LinkedList1Demo {
                     break;                                        // END    case 1
 
                 case 2:                                           // BEGIN  case 2
-                    myList.deleteHeadNode();                      // REMOVE head node(LinkedList1)
+                // REMOVE head node, if none exists give user error message
+                if (myList.deleteHeadNode()) {                    // Check IF pointer exists
+                    System.out.println("Task Completed");       // TRUE  WRITE "Task completed"  
+                } else {                                          // FALSE WRITE "Task not completed"
+                    System.out.println("Task incomplete, no items to delete");
+                }
                     break;                                        // END    case 2
 
                 case 3:                                           // BEGIN  case 3

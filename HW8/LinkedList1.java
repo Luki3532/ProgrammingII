@@ -47,13 +47,12 @@ public class LinkedList1 {
     // contains at least one node (before the deletion). It will return false if the
     // list is empty, and hence nothing can be deleted.
     public boolean deleteHeadNode() {
-        if (head.getLink() != null) {
+        if (head == null) {
+            return false;
+        } else{
             head = head.getLink();
             return true;
         }
-
-        return false;
-
     }
 
     // Description: This method determines the number of nodes that are in the list
